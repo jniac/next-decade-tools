@@ -4,3 +4,14 @@
 .App {
   min-height: 100vh;
 }
+
+.Markdown > * + * {
+  margin-top: 1em;
+}
+
+.DragableDiv {
+  --size: 200px;
+  width: var(--size);
+  height: var(--size);
+  background-color: slateblue;
+}

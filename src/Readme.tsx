@@ -13,7 +13,7 @@ export const Readme = () => {
   }, [])
 
   return (
-    <ReactMarkdown>
+    <ReactMarkdown className='Markdown'>
       {text}
     </ReactMarkdown>
   )
