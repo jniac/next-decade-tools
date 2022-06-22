@@ -1,17 +1,33 @@
 @import url(some-utils/css/main.css);
 @import url(some-utils/css/layout.css);
+@import url(markdown.css);
 
 .App {
-  min-height: 100vh;
+  height: 100vh;
+  padding: 32px;
+  --primary-color: slateblue;
+  --primary-color-light: #7e6eeb;
 }
 
-.Markdown > * + * {
-  margin-top: 1em;
+.App > div {
+  padding: 32px;
+  border: solid 2px var(--primary-color);
 }
 
 .DragableDiv {
   --size: 200px;
   width: var(--size);
   height: var(--size);
-  background-color: slateblue;
+  background-color: var(--primary-color);
+  transition: background .4s ease-in-out;
+}
+
+.DragableDiv.hovered,
+.DragableDiv.dragged {
+  background-color: var(--primary-color-light);
+  transition-duration: .1s;
+  border: solid 2px var(--primary-color);
+}
+.DragableDiv.dragged {
+  border-radius: 8px;
 }

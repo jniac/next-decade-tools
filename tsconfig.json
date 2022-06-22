@@ -19,12 +19,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "src"
   },
   "include": [
+    "src/some-utils/npm/react",
     "src"
   ],
   "exclude": [
-    "src/some-utils/npm",
+    "src/some-utils/npm/three",
+    "src/some-utils/npm/@react-three"
   ]
 }

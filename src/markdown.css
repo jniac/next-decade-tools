@@ -1,0 +1,11 @@
+
+.Markdown pre {
+  padding: 8px;
+  background-color: #3331;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.Markdown > * + * {
+  margin-top: 1em;
+}
