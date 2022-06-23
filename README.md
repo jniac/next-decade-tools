@@ -1,10 +1,10 @@
 # Tools
 
-## Dragable2D
+## Scroller2D
 ### Features
-- Well, it's coming.
-- Really?
-- Hope So.
+- frame rate independant inertia
+- bounds (min / max)
+- margin (with progressive limit)
 
 ### Misc
 It is necessary to install the current directory as as module for accessing 

@@ -22,18 +22,18 @@ export type Scroller2DUpdateArg = Partial<{
 /**
  * Usage: 
  * ```js
- * const Scroller = new Scroller2D().zero().set({
+ * const draggable = new Draggable2D().zero().set({
  *   minX: 0,
  *   maxX: 1000,
  *   marginX: 50,
  * });
  * 
  * onFrame = () => {
- *   Scroller.drag(dx, dy);
- *   Scroller.update();
+ *   draggable.drag(dx, dy);
+ *   draggable.update();
  *   
- *   myComponent.x = Scroller.x;
- *   myComponent.y = Scroller.y;
+ *   myComponent.x = draggable.x;
+ *   myComponent.y = draggable.y;
  * }
  * ```
  */
@@ -88,7 +88,7 @@ export class Scroller2D {
    * By default there are infinite bounds (min, max).  
    * So one requires to use `set()` after, eg: 
    * ```
-   * Scroller.zero().set({ maxX: 200 })
+   * draggable.zero().set({ maxX: 200 })
    * ```
    */
   zero() {
@@ -162,34 +162,6 @@ export class Scroller2D {
     }
 
     return this;
-  }
-
-  setMinMaxX(minX: number, maxX: number) {
-    this._minX = minX;
-    this._maxX = maxX;
-    return this;
-  }
-
-  setMinMaxY(minY: number, maxY: number) {
-    this._minY = minY;
-    this._maxY = maxY;
-    return this;
-  }
-
-  setMin(minX: number, minY: number) {
-    this._minX = minX;
-    this._minY = minY;
-    return this;
-  }
-
-  setMax(maxX: number, maxY: number) {
-    this._maxX = maxX;
-    this._maxY = maxY;
-    return this;
-  }
-
-  setMinMax(minX: number, minY: number, maxX: number, maxY: number) {
-    return this.setMin(minX, minY).setMax(maxX, maxY);
   }
 
   startDrag() {

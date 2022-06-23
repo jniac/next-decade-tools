@@ -7,11 +7,17 @@
   padding: 32px;
   --primary-color: slateblue;
   --primary-color-light: #7e6eeb;
+  --secondary-color: #00bbe1;
+  --secondary-color-light: #12d8ff;
+  touch-action: none;
 }
 
-.App > div {
+.Frame {
   padding: 32px;
   border: solid 2px var(--primary-color);
+}
+.Frame.dragged {
+  border-color: var(--secondary-color);
 }
 
 .DragableDiv {
@@ -20,14 +26,19 @@
   height: var(--size);
   background-color: var(--primary-color);
   transition: background .4s ease-in-out;
+  -webkit-tap-highlight-color: transparent;
 }
-
-.DragableDiv.hovered,
-.DragableDiv.dragged {
+.DragableDiv.hovered {
   background-color: var(--primary-color-light);
-  transition-duration: .1s;
   border: solid 2px var(--primary-color);
+  border-radius: 8px;
+  transition-duration: .1s;
 }
 .DragableDiv.dragged {
+  background-color: var(--secondary-color-light);
+  border: solid 2px var(--secondary-color);
   border-radius: 8px;
+  transition-duration: .1s;
+  /* box-shadow: #3336 4px 8px 16px; */
+  box-shadow: #0001 8px 8px 0;
 }
